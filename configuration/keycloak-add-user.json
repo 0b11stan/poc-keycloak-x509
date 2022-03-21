@@ -1,0 +1,13 @@
+[ {
+  "realm" : "master",
+  "users" : [ {
+    "username" : "admin",
+    "enabled" : true,
+    "credentials" : [ {
+      "type" : "password",
+      "secretData" : "{\"value\":\"N9qHXlbqO/DKsivgv3XTtJ4RCejQIO86MSm5W15H6mUsK7Rea938q33VT/5I2w9kG7sQWxdLM8m38+xFNDnjxQ==\",\"salt\":\"xe9xmC3oXsrZgQums+P/0g==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":100000,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "realmRoles" : [ "admin" ]
+  } ]
+} ]

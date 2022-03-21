@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  keycloak:
+    image: bitnami/keycloak:14.0.0
+    ports:
+      - '8080:8080'
+      - '8443:8443'
+    environment:
+      KEYCLOAK_DATABASE_PORT: 5432
+      KEYCLOAK_DATABASE_HOST: postgres
+      KEYCLOAK_DATABASE_NAME: postgres
+      KEYCLOAK_DATABASE_USER: postgres
+      KEYCLOAK_DATABASE_PASSWORD: postgres
+      KEYCLOAK_ENABLE_TLS: 'true'
+      KEYCLOAK_TLS_KEYSTORE_FILE: /opt/bitnami/keycloak/certs/keystore.jks
+      KEYCLOAK_TLS_TRUSTSTORE_FILE: /opt/bitnami/keycloak/certs/truststore.jks
+      KEYCLOAK_TLS_KEYSTORE_PASSWORD: keypass
+      KEYCLOAK_TLS_TRUSTSTORE_PASSWORD: trustpass
+    volumes:
+      - './configuration:/bitnami/keycloak/configuration'
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
