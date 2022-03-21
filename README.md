@@ -1,5 +1,5 @@
-Autentification Keycloak via certificat X509
-============================================
+Autentification Keycloak via X509 certificate
+=============================================
 
 Présentation
 ------------
